@@ -1,4 +1,4 @@
-name: Test and Build
+name: Test ans build
 
 on:
   push:
@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 jobs:
-  test_and_build:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,6 +19,9 @@ jobs:
         python-version: "3.14"
     - name: Install dependencies
       run: pip install -r src/requirements.txt
-    - name: Test with pytest
+    - name: Realizar un chequeo linting
+      working-directory: src
+      run: ruff check .
+    - name: Test con pytest
       working-directory: src
       run: pytest tests.py
