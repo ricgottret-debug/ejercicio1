@@ -1,4 +1,3 @@
-import string
 # Clasificador de números
 limite = int(input("¿Hasta qué número quieres evaluar? "))
 
