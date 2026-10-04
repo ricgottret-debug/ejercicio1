@@ -1,20 +1,10 @@
-import random
+# Pedir los tres números al usuario
+num1 = float(input("Introduce el primer número: "))
+num2 = float(input("Introduce el segundo número: "))
+num3 = float(input("Introduce el tercer número: "))
 
-# Juego de adivinanza
-numero_secreto = random.randint(1, 20)
-intentos = 0
+# Ordenar los números
+numeros_ordenados = sorted([num1, num2, num3])
 
-print("Estoy pensando en un número entre 1 y 20. ¡Adivínalo!")
-
-while True:
-    intento = int(input("Introduce tu número: "))
-    intentos += 1
-    
-    if intento < numero_secreto:
-        print("Demasiado bajo. Intenta otra vez.")
-    elif intento > numero_secreto:
-        print("Demasiado alto. Intenta otra vez.")
-    else:
-        print(f"¡Felicidades! Acertaste en {intentos} intentos.")
-        break
-    
+# Mostrar el resultado
+print("Números ordenados de menor a mayor:", numeros_ordenados)

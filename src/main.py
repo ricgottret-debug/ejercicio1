@@ -1,8 +1,10 @@
-# Clasificador de números
-limite = int(input("¿Hasta qué número quieres evaluar? "))
+# Pedir los tres números al usuario
+num1 = float(input("Introduce el primer número: "))
+num2 = float(input("Introduce el segundo número: "))
+num3 = float(input("Introduce el tercer número: "))
 
-for i in range(1, limite + 1):
-    if i % 2 == 0:
-        print(f"El número {i} es PAR")
-    else:
-        print(f"El número {i} es IMPAR")
+# Ordenar los números
+numeros_ordenados = sorted([num1, num2, num3])
+
+# Mostrar el resultado
+print("Números ordenados de menor a mayor:", numeros_ordenados)
