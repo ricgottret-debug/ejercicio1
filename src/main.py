@@ -1,25 +1,10 @@
-# Calculadora simple
-print("Selecciona una operación:")
-print("1. Sumar")
-print("2. Restar")
-print("3. Multiplicar")
-print("4. Dividir")
+import random
+import string
+# Clasificador de números
+limite = int(input("¿Hasta qué número quieres evaluar? "))
 
-opcion = input("Introduce el número de la operación (1/2/3/4): ")
-
-num1 = float(input("Primer número: "))
-num2 = float(input("Segundo número: "))
-
-if opcion == '1':
-    print(f"Resultado: {num1 + num2}")
-elif opcion == '2':
-    print(f"Resultado: {num1 - num2}")
-elif opcion == '3':
-    print(f"Resultado: {num1 * num2}")
-elif opcion == '4':
-    if num2 != 0:
-        print(f"Resultado: {num1 / num2}")
+for i in range(1, limite + 1):
+    if i % 2 == 0:
+        print(f"El número {i} es PAR")
     else:
-        print("Error: No se puede dividir entre cero.")
-else:
-    print("Opción no válida.")
+        print(f"El número {i} es IMPAR")

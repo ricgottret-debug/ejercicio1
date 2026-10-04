@@ -1,27 +1,20 @@
-# Calculadora simple
-print("Selecciona una operación:")
-print("1. Sumar")
-print("2. Restar")
-print("3. Multiplicar")
-print("4. Dividir")
+import random
 
-opcion = input("Introduce el número de la operación (1/2/3/4): ")
+# Juego de adivinanza
+numero_secreto = random.randint(1, 20)
+intentos = 0
 
-num1 = float(input("Primer número: "))
-num2 = float(input("Segundo número: "))
+print("Estoy pensando en un número entre 1 y 20. ¡Adivínalo!")
 
-if opcion == '1':
-    print(f"Resultado: {num1 + num2}")
-elif opcion == '2':
-    print(f"Resultado: {num1 - num2}")
-elif opcion == '3':
-    print(f"Resultado: {num1 * num2}")
-elif opcion == '4':
-    if num2 != 0:
-        print(f"Resultado: {num1 / num2}")
+while True:
+    intento = int(input("Introduce tu número: "))
+    intentos += 1
+    
+    if intento < numero_secreto:
+        print("Demasiado bajo. Intenta otra vez.")
+    elif intento > numero_secreto:
+        print("Demasiado alto. Intenta otra vez.")
     else:
-        print("Error: No se puede dividir entre cero.")
-else:
-    print("Opción no válida.")
-
+        print(f"¡Felicidades! Acertaste en {intentos} intentos.")
+        break
     
